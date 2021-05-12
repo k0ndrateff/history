@@ -1,2 +1,0 @@
-(this.webpackJsonpjournal=this.webpackJsonpjournal||[]).push([[0],{10:function(n,t,e){"use strict";e.r(t);e(1);var r=e(3),c=e.n(r),o=e(0);function s(n){return Object(o.jsx)("h1",{children:"\u0413\u043b\u0430\u0432\u043d\u0430\u044f"})}var u=function(){return Object(o.jsx)(s,{})};e(9);c.a.render(Object(o.jsx)(u,{}),document.getElementById("root"))}},[[10,1,2]]]);
-//# sourceMappingURL=main.1c78faf5.chunk.js.map
