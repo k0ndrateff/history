@@ -1,0 +1,21 @@
+.georg {
+    width: 5%;
+    height: 110vh;
+    background-color: white;
+    position: absolute;
+    right: 15%;
+    top: -5%;
+    transform: rotate(10deg);
+    animation: georgian 1s;
+}
+
+@keyframes georgian {
+    from {
+        height: 0vh;
+        right: 12%;
+    }
+    to {
+        height: 110vh;
+        right: 15%;
+    }
+}

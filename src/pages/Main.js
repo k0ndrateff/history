@@ -1,11 +1,13 @@
 import React from 'react';
 
 import Header from '../components/Header';
+import Article from '../components/Article';
 
 export default function Main(props) {
     return (
-        <div className="header">
+        <div>
             <Header />
+            <Article />
         </div>
     );
 }
