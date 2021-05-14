@@ -33,6 +33,8 @@ export default function Article(props) {
     const [platokPlaying, setPlatokPlaying] = useState(false);
     const [dorogiPlaying, setDorogiPlaying] = useState(false);
 
+    const [volume, setVolume] = useState(true);
+
     window.addEventListener('scroll', function() {
         setKatPlaying(isPlaying('kat'));
         setTnochPlaying(isPlaying('tnoch'));
@@ -41,8 +43,31 @@ export default function Article(props) {
         setDorogiPlaying(isPlaying('dorogi'));
     });
 
+    const volumeOff = (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16" onClick={() => setVolume(true)} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clipRule="evenodd" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+        </svg>
+    );
+
+    const volumeOn = (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16" onClick={() => setVolume(false)} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+        </svg>
+    );
+
     return (
         <div className='bg-white mx-auto items-center w-full'>
+            <h2 className='fixed bottom-5 right-5'>{volume ? volumeOn : volumeOff}</h2>
+            <h1 class='text-5xl font-bold text-center mt-8 mb-8'>Приглашаем в путешествие 🎧</h1>
+            <div class='container mx-auto'>
+                <p class='text-3xl mb-8'>
+                Это будет необычное путешествие. По мере чтения нашего материала вы будете слушать музыку, чтобы полностью погрузиться в атмосферу происходящего. Всё будет происходить само, наслаждайтесь :)<br />
+                <br />
+                Однако если рядом с вами кто-то спит, или что-то ещё не позволяет вам воспроизводить звук, вы можете выключить его, нажав на иконку в правом нижнем углу. Сейчас звук <span class='font-bold'>{volume ? 'включен' : 'выключен'}</span>. 
+                </p>
+                <hr class='bg-red-600 h-1' />
+            </div>  
             <h1 class='text-5xl font-bold text-center mt-8 mb-8'>Почему именно музыка? 🤔</h1>
             <div class='container mx-auto'>
                 <p class='text-3xl mb-8'>
@@ -66,7 +91,7 @@ export default function Article(props) {
                     src={Katusha}
                     autoPlay
                     loop
-                    muted={!katPlaying}
+                    muted={!katPlaying || !volume}
                 />
                 <hr class='bg-red-600 h-1' />
             </div>  
@@ -84,7 +109,7 @@ export default function Article(props) {
                     src={TNoch}
                     autoPlay
                     loop
-                    muted={!tnochPlaying}
+                    muted={!tnochPlaying || !volume}
                 />
                 <hr class='bg-red-600 h-1' />
             </div>  
@@ -102,7 +127,7 @@ export default function Article(props) {
                     src={Smugl}
                     autoPlay
                     loop
-                    muted={!smuglPlaying}
+                    muted={!smuglPlaying || !volume}
                 />
                 <hr class='bg-red-600 h-1' />
             </div>  
@@ -120,7 +145,7 @@ export default function Article(props) {
                     src={Platok}
                     autoPlay
                     loop
-                    muted={!platokPlaying}
+                    muted={!platokPlaying || !volume}
                 />
                 <hr class='bg-red-600 h-1' />
             </div>  
@@ -138,9 +163,8 @@ export default function Article(props) {
                     src={Dorogi}
                     autoPlay
                     loop
-                    muted={!dorogiPlaying}
+                    muted={!dorogiPlaying || !volume}
                 />
-                <hr class='bg-red-600 h-1' />
             </div>  
         </div>
     );
