@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/history/static/css/main.9cc1c0df.chunk.css",
-    "main.js": "/history/static/js/main.db772fef.chunk.js",
-    "main.js.map": "/history/static/js/main.db772fef.chunk.js.map",
+    "main.js": "/history/static/js/main.8f5abaa5.chunk.js",
+    "main.js.map": "/history/static/js/main.8f5abaa5.chunk.js.map",
     "runtime-main.js": "/history/static/js/runtime-main.5c204d78.js",
     "runtime-main.js.map": "/history/static/js/runtime-main.5c204d78.js.map",
     "static/css/2.65f9a137.chunk.css": "/history/static/css/2.65f9a137.chunk.css",
@@ -20,6 +20,8 @@
     "static/media/platok.7e15e503.mp3": "/history/static/media/platok.7e15e503.mp3",
     "static/media/smugl.4b97ad60.jpg": "/history/static/media/smugl.4b97ad60.jpg",
     "static/media/smugl.b1558c66.mp3": "/history/static/media/smugl.b1558c66.mp3",
+    "static/media/svash.1567a8b2.mp3": "/history/static/media/svash.1567a8b2.mp3",
+    "static/media/svash.7c6c1c65.jpg": "/history/static/media/svash.7c6c1c65.jpg",
     "static/media/tnoch.5076a56b.mp3": "/history/static/media/tnoch.5076a56b.mp3",
     "static/media/tnoch.b83d640e.jpg": "/history/static/media/tnoch.b83d640e.jpg",
     "static/media/trumpet.6511ddbe.svg": "/history/static/media/trumpet.6511ddbe.svg"
@@ -29,6 +31,6 @@
     "static/css/2.65f9a137.chunk.css",
     "static/js/2.2e044a15.chunk.js",
     "static/css/main.9cc1c0df.chunk.css",
-    "static/js/main.db772fef.chunk.js"
+    "static/js/main.8f5abaa5.chunk.js"
   ]
 }
